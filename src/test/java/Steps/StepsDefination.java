@@ -6,9 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class StepsDefination {
+public class StepsDefination extends Base{
 
-    WebDriver driver;
 
     @Given("I am  in the login page")
     public void i_am_in_the_login_page() throws InterruptedException {
