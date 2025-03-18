@@ -12,10 +12,7 @@ public class StepsDefination {
 
     @Given("I am  in the login page")
     public void i_am_in_the_login_page() throws InterruptedException {
-        driver= new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/");
-        Thread.sleep(5000);
+
     }
     @And("I enter the username (.*)$")
     public void i_enter_the_username_username(String username) {
