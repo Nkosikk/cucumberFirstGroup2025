@@ -17,7 +17,7 @@ public class BrowserFactory {
             }else if(browserChoice.equalsIgnoreCase("edge")){
                 driver= new EdgeDriver();
             }else {
-                driver= new FirefoxDriver();
+                driver= new SafariDriver();
             }
             driver.manage().window().maximize();
             driver.get(url);
