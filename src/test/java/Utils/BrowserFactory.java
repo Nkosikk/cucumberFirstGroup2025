@@ -24,8 +24,8 @@ public class BrowserFactory {
         }
 
 
-        @Test
-        public void test(){
-            starBrowser("jhuyguhoihyhhujik","https://www.saucedemo.com/");
-        }
+//        @Test
+//        public void test(){
+//            starBrowser("jhuyguhoihyhhujik","https://www.saucedemo.com/");
+//        }
 }
