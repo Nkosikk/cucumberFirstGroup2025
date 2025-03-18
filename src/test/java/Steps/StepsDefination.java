@@ -24,13 +24,13 @@ public class StepsDefination extends Base{
     }
     @When("I click login button")
     public void i_click_login_button() {
-        driver.findElement(By.id("login-button")).click();
+        loginPage.clickLoginButton();
 
     }
 
     @Then("Landing page is displayed")
     public void landingPageIsDisplayed() {
-        driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).isDisplayed();
+        landingPage.verifyProductTitleISAvailable();
 
     }
 
