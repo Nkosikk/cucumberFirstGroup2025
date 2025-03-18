@@ -20,6 +20,9 @@ public class LoginPage {
     @FindBy(id = "password")
     WebElement password_id;
 
+    @FindBy(id = "login-button")
+    WebElement login_button;
+
     public LoginPage(WebDriver driver){
         this.driver=driver;
     }
@@ -37,5 +40,10 @@ public class LoginPage {
 
     }
 
+    public void clickLoginButton(){
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(login_button));
+        login_button.click();
+
+    }
 
 }

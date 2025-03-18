@@ -24,7 +24,7 @@ public class StepsDefination extends Base{
     }
     @When("I click login button")
     public void i_click_login_button() {
-        driver.findElement(By.id("login-button")).click();
+        loginPage.clickLoginButton();
 
     }
 
