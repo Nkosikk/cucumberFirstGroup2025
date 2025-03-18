@@ -15,11 +15,11 @@ public class StepsDefination extends Base{
     }
     @And("I enter the username (.*)$")
     public void i_enter_the_username_username(String username) {
-        driver.findElement(By.id("user-name")).sendKeys(username);
+       loginPage.enterUsername(username);
     }
     @And("I enter the password (.*)$")
     public void i_enter_the_password_password(String password) {
-        driver.findElement(By.id("password")).sendKeys(password);
+        loginPage.enterPassword(password);
 
     }
     @When("I click login button")
