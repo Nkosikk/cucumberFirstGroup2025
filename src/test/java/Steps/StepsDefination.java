@@ -30,7 +30,7 @@ public class StepsDefination extends Base{
 
     @Then("Landing page is displayed")
     public void landingPageIsDisplayed() {
-        driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).isDisplayed();
+        landingPage.verifyProductTitleISAvailable();
 
     }
 
