@@ -43,11 +43,5 @@ public class LoginPage {
         loginButton_id.click();
     }
 
-    public void clickLoginButton(){
-        loginButton_id.click();
-
-    }
-
-
 
 }
