@@ -15,7 +15,8 @@ public class LandingPage {
 
     @FindBy(xpath = "//*[@id=\"header_container\"]/div[2]/span")
     WebElement product_xpath;
-
+    @FindBy(id = "add-to-cart-sauce-labs-bike-light")
+    WebElement AddBikeLightToCart_id;
     public LandingPage(WebDriver driver){
         this.driver=driver;
     }
@@ -23,6 +24,10 @@ public class LandingPage {
     public void verifyProductTitleISAvailable(){
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(product_xpath));
         product_xpath.isDisplayed();
+
+    }
+    public void AddProductToCart(){
+       AddBikeLightToCart_id.click();
 
     }
 

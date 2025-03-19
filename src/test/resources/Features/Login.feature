@@ -6,6 +6,7 @@ Feature: Login
     And I enter the password <password>
     When I click login button
     And Landing page is displayed
+    And I add item to cart
     Examples:
       | username      | password     |
       | standard_user | secret_sauce |

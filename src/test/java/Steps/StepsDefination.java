@@ -33,10 +33,14 @@ public class StepsDefination extends Base{
         landingPage.verifyProductTitleISAvailable();
 
     }
+    @Then("I add item to cart")
+    public void I_add_item_to_cart() {
+        landingPage.AddProductToCart();
+    }
 
     @After
     public void closeBrowser(){
-        driver.quit();
+      driver.quit();
     }
 
     @And("I select the cart")
