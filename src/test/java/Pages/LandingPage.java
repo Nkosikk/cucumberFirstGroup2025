@@ -11,22 +11,23 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class LandingPage {
 
+
     WebDriver driver;
 
     @FindBy(xpath = "//*[@id=\"header_container\"]/div[2]/span")
     WebElement product_xpath;
 
-    public LandingPage(WebDriver driver){
-        this.driver=driver;
+    public LandingPage(WebDriver driver) {
+        this.driver = driver;
     }
 
-    public void verifyProductTitleISAvailable(){
+    public void verifyProductTitleISAvailable() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(product_xpath));
         product_xpath.isDisplayed();
 
     }
 
-
-
-
+    public void TestGIT() {
+        System.out.println("Test GIT");
+    }
 }
