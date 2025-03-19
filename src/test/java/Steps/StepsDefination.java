@@ -37,13 +37,68 @@ public class StepsDefination extends Base{
     public void I_add_item_to_cart() {
         landingPage.AddProductToCart();
     }
+    @And("I click on the cart button")
+    public void i_click_on_the_cart_button() {
+        landingPage.clickCartButton();
+    }
+
+    @Then("Cart page is displayed")
+    public void Cart_page_is_displayed() {
+        driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).isDisplayed();
+
+    }
+
+    @And("I click on the checkout button")
+    public void i_click_on_the_checkout_button() {
+        driver.findElement(By.id("checkout")).click();
+    }
+
+    @Then("Checkout page is displayed")
+    public void Checkout_page_is_displayed() {
+        driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[2]/span")).isDisplayed();}
+
+    @And("I enter the name(.*)$")
+    public void i_enter_the_name_name(String name) {
+        driver.findElement(By.id("first-name")).sendKeys(name);
+
+    }
+
+    @And("I enter the lastname(.*)$")
+    public void i_enter_the_lastname_lastname(String lastname) {
+        driver.findElement(By.id("last-name")).sendKeys(lastname);
+    }
+
+    @And("I enter the postal code(.*)$")
+    public void i_enter_the_postalcode_postalcode(String postalcode) {
+        driver.findElement(By.id("postal-code")).sendKeys(postalcode);
+    }
+
+    @And("I click on continue button")
+    public void i_click_on_continue_button() {
+        driver.findElement(By.id("continue")).click();
+    }
+
+    @Then("Overview page is displayed")
+    public void Overview_page_is_displayed() {
+        driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).isDisplayed();
+
+    }
+
+    @And("I click on the finish button")
+    public void i_click_on_finish_button() {
+        driver.findElement(By.id("finish")).click();
+    }
+
+    @Then("Confirmation page is displayed")
+    public void Confirmation_page_is_displayed() {
+        driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).isDisplayed();
+
+    }
 
     @After
     public void closeBrowser(){
       driver.quit();
     }
 
-    @And("I select the cart")
-    public void iSelectTheCart() {
-    }
+
 }
