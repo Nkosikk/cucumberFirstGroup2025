@@ -27,7 +27,4 @@ public class LandingPage {
 
     }
 
-    public void TestGIT() {
-        System.out.println("Test GIT");
-    }
 }
