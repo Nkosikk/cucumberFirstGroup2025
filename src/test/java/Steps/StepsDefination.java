@@ -42,4 +42,18 @@ public class StepsDefination extends Base{
     @And("I select the cart")
     public void iSelectTheCart() {
     }
+
+    /*
+    @Then("I click the add to (.*) to the cart$")
+    public void iClickTheAddToItemToTheCart(String productName ) {
+        landingPage.clickAddToCart(productName);
+    }
+    */
+
+    @And("I click (.*) add to cart button$")
+    public void iClickItemAddToCartButton(String productName) {
+        landingPage.clickAddToCart(productName);
+    }
+
+
 }
