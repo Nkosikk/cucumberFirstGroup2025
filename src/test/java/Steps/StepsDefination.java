@@ -4,6 +4,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class StepsDefination extends Base{
@@ -34,10 +35,10 @@ public class StepsDefination extends Base{
 
     }
 
-    @After
-    public void closeBrowser(){
+    /*@After
+    /public void closeBrowser(){
         driver.quit();
-    }
+    }*/
 
     @And("I select the cart")
     public void iSelectTheCart() {
@@ -56,4 +57,28 @@ public class StepsDefination extends Base{
     }
 
 
+    @And("I click the cart button")
+    public void iClickTheCartButton() {
+        landingPage.clickCartButton();
+    }
+
+    @And("I confirm on the cart page")
+    public void iConfirmOnTheCartPage() {
+        cartPage.confirmYouAreOnCartPage();
+    }
+
+    //To be used later when adding multiple products
+   /* @And("I confirm the items in the cart")
+    public void iConfirmTheItemsInTheCart() {
+        if (cartItems.isEmpty()) {
+            throw new AssertionError("Cart is empty!");
+        }
+        for (WebElement item : cartItems) {
+            if (!item.isDisplayed()) {
+                throw new AssertionError("Cart item is not displayed!");
+            }
+        }
+    }
+
+    }*/
 }

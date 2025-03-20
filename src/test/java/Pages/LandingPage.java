@@ -17,6 +17,9 @@ public class LandingPage {
     @FindBy(xpath = "//*[@id=\"header_container\"]/div[2]/span")
     WebElement product_xpath;
 
+    @FindBy(xpath = " //*[@id=\"shopping_cart_container\"]")
+    WebElement cartButton_xpath;
+
 
 
     public LandingPage(WebDriver driver){
@@ -35,7 +38,9 @@ public class LandingPage {
         addToCartButton.click();
     }
 
-
+    public void clickCartButton() {
+        cartButton_xpath.click();
+    }
 
 
 }

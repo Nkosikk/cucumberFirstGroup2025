@@ -8,6 +8,8 @@ Feature: Login
     And Landing page is displayed
     And I click sauce-labs-bike-light add to cart button
     And I click sauce-labs-backpack add to cart button
+    And I click the cart button
+    And I confirm on the cart page
     Examples:
       | username      | password     |
       | standard_user | secret_sauce |
