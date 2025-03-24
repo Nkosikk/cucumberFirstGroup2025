@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +17,11 @@ public class LandingPage {
     @FindBy(xpath = "//*[@id=\"header_container\"]/div[2]/span")
     WebElement product_xpath;
 
+    @FindBy(xpath = " //*[@id=\"shopping_cart_container\"]")
+    WebElement cartButton_xpath;
+
+
+
     public LandingPage(WebDriver driver){
         this.driver=driver;
     }
@@ -26,7 +32,15 @@ public class LandingPage {
 
     }
 
+    public void clickAddToCart(String productName){
+        WebElement addToCartButton = driver.findElement(
+                By.xpath("//*[@id='add-to-cart-"+productName+"']"));
+        addToCartButton.click();
+    }
 
+    public void clickCartButton() {
+        cartButton_xpath.click();
+    }
 
 
 }
