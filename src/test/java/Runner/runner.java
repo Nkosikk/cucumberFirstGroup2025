@@ -7,8 +7,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/Features",
         glue = {"Steps"},
-        tags = "",
-        plugin = {"pretty"},
+        tags = "@PurchaseItem",
+        plugin = {"html:target/cucumber-report.html"},
         monochrome = true,
         publish = true)
 public class runner extends AbstractTestNGCucumberTests {
