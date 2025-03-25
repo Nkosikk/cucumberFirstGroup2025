@@ -1,10 +1,10 @@
 package Steps;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class StepsDefination extends Base{
@@ -67,10 +67,19 @@ public class StepsDefination extends Base{
         cartPage.confirmYouAreOnCartPage();
     }
 
+    @AfterStep
+    public void addScreenshots(Scenario scenario){
+        if (scenario.isFailed()){
+            byte[] screenshots=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshots,"image/png","image");
+        }
+    }
+
     @After
     public void closeBrowser(){
         driver.quit();
     }
+
 
     //To be used later when adding multiple products
    /* @And("I confirm the items in the cart")
