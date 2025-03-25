@@ -67,6 +67,11 @@ public class StepsDefination extends Base{
         cartPage.confirmYouAreOnCartPage();
     }
 
+    @After
+    public void closeBrowser(){
+        driver.quit();
+    }
+
     //To be used later when adding multiple products
    /* @And("I confirm the items in the cart")
     public void iConfirmTheItemsInTheCart() {

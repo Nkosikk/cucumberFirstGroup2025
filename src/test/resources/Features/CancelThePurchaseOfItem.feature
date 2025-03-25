@@ -1,7 +1,7 @@
-@Regression @Sanity @PurchaseItem
+@Regression @Sanity @cancelPurchase
 Feature: purchase Item
 
-  Scenario Outline: As a user i want to purchase an item
+  Scenario Outline: As a user i want to Cancel the purchase of an item at the  overview screen
     Given I am  in the login page
     And I enter the username <username>
     And I enter the password <password>
@@ -13,7 +13,7 @@ Feature: purchase Item
     And I confirm on the cart page
     Examples:
       | username      | password     |
-      | standard_user | secret_sauce |
+      | performance_glitch_user | secret_sauce |
 
 
 
