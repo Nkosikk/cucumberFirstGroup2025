@@ -119,4 +119,9 @@ public class StepsDefination extends Base{
     public void iEnterTheZipCodeZipcode(String zipCode) {
         userInformationPage.enterZipCode(zipCode);
     }
+
+    @And("I click the continue button")
+    public void iClickTheContinueButton() {
+        userInformationPage.clickContinueButton();
+    }
 }
