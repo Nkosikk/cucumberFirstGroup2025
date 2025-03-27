@@ -13,7 +13,7 @@ Feature: purchase Item
     And I confirm on the cart page
     Examples:
       | username      | password     |
-      | performance_glitch_user1 | secret_sauce |
+      | performance_glitch_user | secret_sauce |
 
 
 
