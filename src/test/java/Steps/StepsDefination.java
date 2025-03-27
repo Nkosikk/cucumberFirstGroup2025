@@ -102,4 +102,21 @@ public class StepsDefination extends Base{
     public void closeBrowser(){
         driver.quit();
     }
+
+    @And("I enter the first Name (.*)$")
+    public void iEnterTheFirstNameFirstName(String firstName) {
+        userInformationPage.enterFirstName(firstName);
+
+    }
+
+    @And("I enter the last name (.*)$")
+    public void iEnterTheLastNameLastName(String lastName) {
+        userInformationPage.enterLastName(lastName);
+
+    }
+
+    @And("I enter the zip code (.*)$")
+    public void iEnterTheZipCodeZipcode(String zipCode) {
+        userInformationPage.enterZipCode(zipCode);
+    }
 }

@@ -12,9 +12,12 @@ Feature: purchase Item
     And I click the cart button
     And I confirm on the cart page
     And I click the checkout button
+    And I enter the first Name <firstName>
+    And I enter the last name <lastName>
+    And I enter the zip code <zipcode>
     Examples:
-      | username      | password     |
-      | standard_user | secret_sauce |
+      | username      | password     | firstName | lastName | zipcode |
+      | standard_user | secret_sauce | Nkosi     | Cele     | 2094    |
 
 
 
