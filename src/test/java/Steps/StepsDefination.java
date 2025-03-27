@@ -75,9 +75,11 @@ public class StepsDefination extends Base{
         }
     }
 
-    @After
-    public void closeBrowser(){
-        driver.quit();
+
+
+    @And("I click the checkout button")
+    public void iClickTheCheckoutButton() {
+        cartPage.clickTheCheckoutButton();
     }
 
 
@@ -95,4 +97,9 @@ public class StepsDefination extends Base{
     }
 
     }*/
+
+    @After
+    public void closeBrowser(){
+        driver.quit();
+    }
 }

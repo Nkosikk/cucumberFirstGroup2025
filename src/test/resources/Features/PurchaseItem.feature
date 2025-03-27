@@ -11,6 +11,7 @@ Feature: purchase Item
     And I click sauce-labs-backpack add to cart button
     And I click the cart button
     And I confirm on the cart page
+    And I click the checkout button
     Examples:
       | username      | password     |
       | standard_user | secret_sauce |
