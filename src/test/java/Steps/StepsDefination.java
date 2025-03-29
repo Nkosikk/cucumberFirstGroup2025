@@ -16,7 +16,7 @@ public class StepsDefination extends Base{
     }
     @And("I enter the username (.*)$")
     public void i_enter_the_username_username(String username) {
-       loginPage.enterUsername(username);
+       loginPage.enterUsername(readFromExcel.username);
     }
     @And("I enter the password (.*)$")
     public void i_enter_the_password_password(String password) {
@@ -118,5 +118,15 @@ public class StepsDefination extends Base{
     @And("I enter the zip code (.*)$")
     public void iEnterTheZipCodeZipcode(String zipCode) {
         userInformationPage.enterZipCode(zipCode);
+    }
+
+    @And("I click the continue button")
+    public void iClickTheContinueButton() {
+        userInformationPage.clickContinueButton();
+    }
+
+    @Then("I verify that item total plus tax is equal to total")
+    public void iVerifyThatItemTotalPlusTaxIsEqualToTotal() {
+        checkoutOverWiewPage.verifyItemTotalPlusTaxIsEqualTotal();
     }
 }

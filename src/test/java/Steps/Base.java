@@ -1,12 +1,12 @@
 package Steps;
 
-import Pages.CartPage;
-import Pages.LandingPage;
-import Pages.LoginPage;
-import Pages.UserInformationPage;
+import Pages.*;
 import Utils.BrowserFactory;
+import Utils.ReadFromExcel;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+
+import java.io.IOException;
 
 public class Base {
 
@@ -18,5 +18,16 @@ public class Base {
     LandingPage landingPage = PageFactory.initElements(driver,LandingPage.class);
     CartPage cartPage = PageFactory.initElements(driver,CartPage.class);
     UserInformationPage userInformationPage = PageFactory.initElements(driver,UserInformationPage.class);
+    CheckoutOverWiewPage checkoutOverWiewPage = PageFactory.initElements(driver,CheckoutOverWiewPage.class);
+
+    ReadFromExcel readFromExcel;
+
+    {
+        try {
+            readFromExcel = new ReadFromExcel();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }
