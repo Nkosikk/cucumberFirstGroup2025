@@ -18,6 +18,7 @@ Feature: purchase Item
     When I click the continue button
     Then I verify that item total plus tax is equal to total
 
+
     Examples:
       | username      | password     | firstName | lastName | zipcode |
       | standard_user | secret_sauce | Nkosi     | Cele     | 2094    |

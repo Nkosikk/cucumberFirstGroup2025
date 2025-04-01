@@ -98,10 +98,10 @@ public class StepsDefination extends Base{
 
     }*/
 
-    @After
-    public void closeBrowser(){
-        driver.quit();
-    }
+   // @After
+   // public void closeBrowser(){
+    //    driver.quit();
+   // }
 
     @And("I enter the first Name (.*)$")
     public void iEnterTheFirstNameFirstName(String firstName) {
@@ -129,4 +129,6 @@ public class StepsDefination extends Base{
     public void iVerifyThatItemTotalPlusTaxIsEqualToTotal() {
         checkoutOverWiewPage.verifyItemTotalPlusTaxIsEqualTotal();
     }
+
+
 }

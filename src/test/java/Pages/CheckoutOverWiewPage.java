@@ -25,6 +25,9 @@ public class CheckoutOverWiewPage {
     @FindBy(xpath = "//*[@id=\"checkout_summary_container\"]/div/div[2]/div[8]")
     WebElement Total_xpath;
 
+    @FindBy(id = "finish")
+    WebElement finishButton_id;
+
 
     public CheckoutOverWiewPage(WebDriver driver) {
         this.driver = driver;
@@ -68,10 +71,10 @@ public class CheckoutOverWiewPage {
 
         // check if item, total plus tax is the same
 
-        if (itemTotalPlusTax + 1 == Total) {
+        if (itemTotalPlusTax  == Total) {
             System.out.println("The calculation are correct");
             assert true;
-            // put the code to click finish button
+             finishButton_id.click();
         } else {
             // do the code to click cancel
             System.out.println("The calculation are not correct");
