@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +31,10 @@ public class CheckoutOverWiewPage {
 
     @FindBy(id = "cancel")
     WebElement cancelButton_id;
+    @FindBy(id = "react-burger-menu-btn")
+    WebElement menuButton_id;
+    @FindBy(id = "logout_sidebar_link")
+    WebElement logoutButton_id;
 
 
     public CheckoutOverWiewPage(WebDriver driver) {
@@ -74,21 +79,26 @@ public class CheckoutOverWiewPage {
 
         // check if item, total plus tax is the same
 
-        if (itemTotalPlusTax +1 == Total) {
+        if (itemTotalPlusTax == Total) {
             System.out.println("The calculation are correct");
             assert true;
-             finishButton_id.click();
+            finishButton_id.click();
         } else {
 
             System.out.println("The calculation are not correct");
             assert false;
             cancelButton_id.click();
         }
-
-        // put the logout code here
-
-
     }
+
+        public void logout() {
+            menuButton_id.click();
+            new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(logoutButton_id));
+            logoutButton_id.click();
+        }
+
+
+
 
 
 }

@@ -17,6 +17,7 @@ Feature: purchase Item
     And I enter the zip code <zipcode>
     When I click the continue button
     Then I verify that item total plus tax is equal to total
+    And I log out from site
 
 
     Examples:

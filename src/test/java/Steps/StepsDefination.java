@@ -131,4 +131,8 @@ public class StepsDefination extends Base{
     }
 
 
+    @And("I log out from site")
+    public void iLogOutFromSite() {
+        checkoutOverWiewPage.logout();
+    }
 }
