@@ -28,6 +28,9 @@ public class CheckoutOverWiewPage {
     @FindBy(id = "finish")
     WebElement finishButton_id;
 
+    @FindBy(id = "cancel")
+    WebElement cancelButton_id;
+
 
     public CheckoutOverWiewPage(WebDriver driver) {
         this.driver = driver;
@@ -71,14 +74,15 @@ public class CheckoutOverWiewPage {
 
         // check if item, total plus tax is the same
 
-        if (itemTotalPlusTax  == Total) {
+        if (itemTotalPlusTax +1 == Total) {
             System.out.println("The calculation are correct");
             assert true;
              finishButton_id.click();
         } else {
-            // do the code to click cancel
+
             System.out.println("The calculation are not correct");
             assert false;
+            cancelButton_id.click();
         }
 
         // put the logout code here
