@@ -68,7 +68,7 @@ public class CheckoutOverWiewPage {
 
         // check if item, total plus tax is the same
 
-        if (itemTotalPlusTax + 1 == Total) {
+        if (itemTotalPlusTax == Total) {
             System.out.println("The calculation are correct");
             assert true;
             // put the code to click finish button
