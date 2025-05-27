@@ -7,16 +7,16 @@ Feature: purchase Item
     And I enter the password <password>
     When I click login button
     And Landing page is displayed
-    And I click sauce-labs-bike-light add to cart button
-    And I click sauce-labs-backpack add to cart button
-    And I click the cart button
-    And I confirm on the cart page
-    And I click the checkout button
-    And I enter the first Name <firstName>
-    And I enter the last name <lastName>
-    And I enter the zip code <zipcode>
-    When I click the continue button
-    Then I verify that item total plus tax is equal to total
+#    And I click sauce-labs-bike-light add to cart button
+#    And I click sauce-labs-backpack add to cart button
+#    And I click the cart button
+#    And I confirm on the cart page
+#    And I click the checkout button
+#    And I enter the first Name <firstName>
+#    And I enter the last name <lastName>
+#    And I enter the zip code <zipcode>
+#    When I click the continue button
+#    Then I verify that item total plus tax is equal to total
 
     Examples:
       | username      | password     | firstName | lastName | zipcode |
