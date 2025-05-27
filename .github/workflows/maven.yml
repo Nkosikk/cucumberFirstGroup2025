@@ -11,7 +11,7 @@ name: Java CI with Maven
 on:
   workflow_dispatch: # Allows manual triggering
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   build:
