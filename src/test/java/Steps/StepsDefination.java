@@ -1,11 +1,9 @@
 package Steps;
 
-import io.cucumber.java.After;
-import io.cucumber.java.en.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class StepsDefination extends Base{
 
@@ -16,7 +14,8 @@ public class StepsDefination extends Base{
     }
     @And("I enter the username (.*)$")
     public void i_enter_the_username_username(String username) {
-       loginPage.enterUsername(username);
+
+        loginPage.enterUsername(username);
     }
     @And("I enter the password (.*)$")
     public void i_enter_the_password_password(String password) {

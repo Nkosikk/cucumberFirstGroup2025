@@ -11,10 +11,9 @@ public class Base {
 
     BrowserFactory browserFactory = new BrowserFactory();
 
-    final WebDriver driver =browserFactory.startBrowser("chrome","https://www.saucedemo.com/");
+    final WebDriver driver = browserFactory.startBrowser("chrome", "https://www.saucedemo.com/");
 
-    LoginPage loginPage = PageFactory.initElements(driver,LoginPage.class);
-    LandingPage landingPage = PageFactory.initElements(driver,LandingPage.class);
-    CartPage cartPage = PageFactory.initElements(driver,CartPage.class);
-
+    LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+    LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class);
+    CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
 }
