@@ -10,7 +10,7 @@ import java.time.Duration;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
-public class LoginPages {
+public class LandingPage {
 
     WebDriver driver;
 
@@ -22,12 +22,7 @@ public class LoginPages {
 
 
 
-    public  LoginPages (WebDriver driver){
-
-
-
-
-
+    public LandingPage(WebDriver driver){
         this.driver=driver;
     }
 
@@ -50,3 +45,4 @@ public class LoginPages {
 
 }
 
+}

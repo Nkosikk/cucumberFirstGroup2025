@@ -5,12 +5,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.messages.internal.com.fasterxml.jackson.databind.deser.Deserializers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class Stepdefinition {
+public class Stepdefinition extends Base Class{
     WebDriver driver;
 
     @Given("I am in the login page")
@@ -40,12 +41,23 @@ public class Stepdefinition {
 
     @Then("Landing page is displayed")
     public void landing_page_is_displayed() {
-        driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).isDisplayed();
+       // driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).isDisplayed();
+        landingpage
     }
 
     @After
     public void closeBrowser() {
         driver.quit();
     }
+
+
+    @And("I select the cart ")
+    public void iSelectTheCart() {
+    }
+
+    @And("I click (.*)add to  cart button")
+    public void iClickItemAddToCartButton(String productN)
+
+
 
 }
