@@ -1,5 +1,6 @@
 package Steps;
 
+import Pages.CartPage;
 import Pages.LandingPage;
 import Pages.LoginPages;
 import Utils.BrowserFactory;
@@ -15,7 +16,7 @@ public class Base {
 
     LoginPages loginPage = PageFactory.initElements(driver,LoginPages.class);
     LandingPage landingPage = PageFactory.initElements(driver,LandingPage.class);
-    CartPage cartPage = PageFactory.initElements(driver,CartPage.class);
+    CartPage cartPage = PageFactory.initElements(driver, CartPage.class);
 
 
 }

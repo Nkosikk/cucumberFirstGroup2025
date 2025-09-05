@@ -33,8 +33,10 @@ public class LandingPage {
     }
 
     public void clickAddToCart(String productName){
-        WebElement addToCartButton = driver.findElement(
-                By.xpath("//*[@id='add-to-cart-"+productName+"']"));
+        WebElement addToCartButton = driver.findElement(By.xpath("//*[@id='add-to-cart-"
+                + productName +"']"));
+
+
         addToCartButton.click();
     }
 
@@ -45,4 +47,4 @@ public class LandingPage {
 
 }
 
-}
+

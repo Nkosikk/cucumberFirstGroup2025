@@ -14,37 +14,33 @@ public class LoginPages {
 
     WebDriver driver;
 
-    @FindBy(xpath = "//*[@id=\"header_container\"]/div[2]/span")
-    WebElement product_xpath;
+    @FindBy(id = "user-name")
+    WebElement username_id;
 
-    @FindBy(xpath = " //*[@id=\"shopping_cart_container\"]")
-    WebElement cartButton_xpath;
+    @FindBy(id = "password")
+    WebElement password_id;
 
+    @FindBy(id = "login-button")
+    WebElement loginButton_id;
 
-
-    public  LoginPages (WebDriver driver){
-
-
-
-
-
+    public LoginPage(WebDriver driver){
         this.driver=driver;
     }
 
-    public void verifyProductTitleISAvailable(){
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(product_xpath));
-        product_xpath.isDisplayed();
+    public LoginPage enterUsername(String username){
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(username_id));
+        username_id.sendKeys(username);
 
+        return this;
     }
 
-    public void clickAddToCart(String productName){
-        WebElement addToCartButton = driver.findElement(
-                By.xpath("//*[@id='add-to-cart-"+productName+"']"));
-        addToCartButton.click();
+    public void enterPassword(String password){
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(password_id));
+        password_id.sendKeys(password);
     }
 
-    public void clickCartButton() {
-        cartButton_xpath.click();
+    public void clickLoginButton(){
+        loginButton_id.click();
     }
 
 

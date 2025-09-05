@@ -11,53 +11,66 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class Stepdefinition extends Base Class{
+public class Stepdefinition extends Base  {
     WebDriver driver;
 
-    @Given("I am in the login page")
+    @Given("I am  in the login page")
     public void i_am_in_the_login_page() throws InterruptedException {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/");
-        Thread.sleep(5000);
+
     }
 
     @And("I enter the username (.*)$")
     public void i_enter_the_username_username(String username) {
-        driver.findElement(By.id("user-name")).sendKeys(username);
+        loginPage.enterUsername(username);
     }
 
     @And("I enter the password (.*)$")
     public void i_enter_the_password_password(String password) {
-        driver.findElement(By.id("password")).sendKeys(password);
+        loginPage.enterPassword(password);
 
     }
 
-    @When("I click  the button")
-    public void i_click_the_the_button() {
-        driver.findElement(By.id("login-button")).click();
+    @When("I click login button")
+    public void i_click_login_button() {
+        loginPage.clickLoginButton();
 
     }
 
     @Then("Landing page is displayed")
-    public void landing_page_is_displayed() {
-       // driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).isDisplayed();
-        landingpage
+    public void landingPageIsDisplayed() {
+        landingPage.verifyProductTitleISAvailable();
+
     }
 
-    @After
-    public void closeBrowser() {
+    /*@After
+    /public void closeBrowser(){
         driver.quit();
-    }
+    }*/
 
-
-    @And("I select the cart ")
+    @And("I select the cart")
     public void iSelectTheCart() {
     }
 
-    @And("I click (.*)add to  cart button")
-    public void iClickItemAddToCartButton(String productN)
+    /*
+    @Then("I click the add to (.*) to the cart$")
+    public void iClickTheAddToItemToTheCart(String productName ) {
+        landingPage.clickAddToCart(productName);
+    }
+    */
+
+    @And("I click (.*) add to cart button$")
+    public void iClickItemAddToCartButton(String productName) {
+        landingPage.clickAddToCart(productName);
+    }
 
 
+    @And("I click the cart button")
+    public void iClickTheCartButton() {
+        landingPage.clickCartButton();
+    }
 
+    @And("I confirm on the cart page")
+    public void iConfirmOnTheCartPage() {
+        cartPage.confirmYouAreOnCartPage();
+    }
 }
