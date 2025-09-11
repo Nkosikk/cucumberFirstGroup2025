@@ -18,7 +18,7 @@ WebDriver driver;
 
    public CartPage(WebDriver driver){
 
-      this.driver=river;
+      this.driver=driver;
    }
           public void youAreInTheCartPge() {
               new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(yourCart_xpath));
