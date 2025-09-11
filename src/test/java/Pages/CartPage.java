@@ -11,21 +11,22 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class CartPage {
 
-    WebDriver driver;
+WebDriver driver;
 
-    @FindBy(xpath = "//*[@id=\"header_container\"]/div[2]/span")
-    WebElement YourCart_xpath;
+   @FindBy(xpath = "//*[@id=\"header_container\"]/div[2]/span")
+    WebElement yourCart_xpath;
 
-    public CartPage(WebDriver driver){
-        this.driver=driver;
-    }
+   public CartPage(WebDriver driver){
 
-
-    public void confirmYouAreOnCartPage(){
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(YourCart_xpath));
-        YourCart_xpath.isDisplayed();
-
-    }
-
-
+      this.driver=river;
+   }
+          public void youAreInTheCartPge() {
+              new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(yourCart_xpath));
+              yourCart_xpath.isDisplayed();
+          }
 }
+
+
+
+
+
