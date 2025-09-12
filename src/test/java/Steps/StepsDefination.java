@@ -64,7 +64,7 @@ public class StepsDefination extends Base{
 
     @And("I confirm on the cart page")
     public void iConfirmOnTheCartPage() {
-        cartPage.confirmYouAreOnCartPage();
+        cartPage.youAreInTheCartPge();
     }
 
     //To be used later when adding multiple products
